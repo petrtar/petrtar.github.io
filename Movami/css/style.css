@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+/* font-family: 'Open Sans', sans-serif; */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+#wrapper {
+	max-width: 1920px;
+	background-color: #fff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 34px;
+	font-weight: bold;
+}
+
+p {
+	font-size: 20px;
+}
+
+a.Windows, a.Apple {
+	font-size: 20px;
+	padding: 25px;
+	padding-left: 60px;
+	border: 1px solid inherit;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #fff;
+}
+
+	a.Windows {
+		background: #3581d5 url("../img/Windows_logo.png") 25px center no-repeat;
+		margin-right: 33px;	
+	}
+
+	a.Apple {
+		background: #1962b2 url("../img/mac_ logo_grey.png") 25px center no-repeat;
+	}
+
+.container {
+	max-width: 1140px;
+	width: 98%;
+	margin: 0 auto;
+}
+
+header {
+	background-color: #282828;
+	height: 77px;
+}
+
+						
+						/* #Banner */
+
+
+#Banner {
+	background: url("../img/banner_background.png") no-repeat;
+	padding: 70px 0 60px;
+	
+}
+
+	.content {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+		#Banner .content_image {
+			padding-top: 45px;
+		}
+
+		#Banner .content_text span {
+			font-size: 40px;
+			display: inline-block;
+			margin-bottom: 20px;
+		}
+
+		#Banner .content_text h1 {
+			margin-bottom: 25px;
+		}
+
+		#Banner .content_text ul {
+			padding-left: 20px;
+			margin-bottom: 20px;
+		}
+
+		#Banner .content_text li {
+			font-size: 20px;
+			padding-bottom: 10px;
+		}
+
+		#Banner span.contentDown {
+			font-size: 22px;
+			font-weight: 700;
+			margin-bottom: 50px;
+		}
+
+					/* Block1 */
+
+#Block1 {
+	padding-top: 85px;
+	padding-bottom: 25px;
+}	
+
+	#Block1 h1 {
+		text-align: center;
+		margin-bottom: 30px;
+	}			
+
+	#Block1 p {
+		margin-bottom: 75px;
+		text-align: justify;
+	}	
+
+	#Block1 .buttom {
+		text-align: center;
+	}
+
+						/* Block2 */
+
+#Block2 {
+	padding-top: 60px;
+}
+
+	#Block2 .container {
+		padding-left: 30px;
+	}
+
+#Block2 h2, #Block2 p {
+	margin-bottom: 40px;
+}
+
+#Block2 .content_text {
+	width: 620px;
+}
+
+				/* Закладки */
+.notebook > input {
+    display: none;
+}
+
+	
+
+	.notebook label {
+		display: inline-block;
+		width: 20%;
+		height: 70px;
+		line-height: 65px;
+		text-align: center;
+		font-size: 20px;
+		color: #1962b2;
+		cursor: pointer;
+		border: 3px solid #1962b2;
+		margin-bottom: 37px;
+	}
+
+		#Block2 .notebook label:nth-child(2) {
+			border-radius: 5px 0 0 5px;
+			margin-left: 30%;
+			margin-right: -24px;
+		}
+
+		#Block2 .notebook label:nth-child(4) {
+			border-radius: 0 5px 5px 0;
+		}
+
+		.notebook > input:checked + label {
+			background-color: #1962b2;
+			color: #fff;
+		}
+
+		#tabFull, #tabEasy {
+			background-color: #eeeeee;
+			padding-top: 50px;
+			display: none;
+		}
+
+#Block2 .notebook > input:nth-of-type(1):checked ~ div:nth-of-type(1),
+#Block2 .notebook > input:nth-of-type(2):checked ~ div:nth-of-type(2) {
+    display: block;
+}
+
+	#tabEasy .figure {
+		
+		background-image: url("../img/figure.png");
+		height: 22px;
+		width: 56px;
+	}
+
+#Block2 .content {
+	margin-bottom: 40px;
+}
+
+#Block2 .linkMode {
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+#Block2 .linkMode a {
+	background: url("../img/arrow.png") left center  no-repeat;
+	text-decoration: none;
+	color: #579bb5;
+	padding: 40px;
+	font-size: 20px;
+	}
+	
+	#Block2 .linkMode a:hover {
+		text-decoration: underline;
+	}
+
+		
