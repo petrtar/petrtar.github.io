@@ -28,7 +28,12 @@ p {
 	font-size: 20px;
 }
 
+.colRed {
+	color: #f68263;
+}
+
 a.Windows, a.Apple {
+	display: inline-block;
 	font-size: 20px;
 	padding: 25px;
 	padding-left: 60px;
@@ -36,6 +41,7 @@ a.Windows, a.Apple {
 	border-radius: 5px;
 	text-decoration: none;
 	color: #fff;
+	margin-bottom: 20px;
 }
 
 	a.Windows {
@@ -46,6 +52,13 @@ a.Windows, a.Apple {
 	a.Apple {
 		background: #1962b2 url("../img/mac_ logo_grey.png") 25px center no-repeat;
 	}
+
+@media screen and (max-width: 585px) {
+	a.Windows, a.Apple {
+		width:95%;
+		margin-right: 0px;	
+	}
+}
 
 .container {
 	max-width: 1140px;
@@ -63,7 +76,7 @@ header {
 
 
 #Banner {
-	background: url("../img/banner_background.png") no-repeat;
+	background: url("../img/banner_background2.png") repeat-y;
 	padding: 70px 0 60px;
 	
 }
@@ -75,7 +88,9 @@ header {
 	}
 
 		#Banner .content_image {
-			padding-top: 45px;
+			background: url("../img/banner_icons.png") center 45px no-repeat;
+			width: 266px;
+			height: 370px;
 		}
 
 		#Banner .content_text span {
@@ -100,9 +115,34 @@ header {
 
 		#Banner span.contentDown {
 			font-size: 22px;
-			font-weight: 700;
 			margin-bottom: 50px;
 		}
+
+@media screen and (max-width: 1100px) {
+	#Banner .content_text h1, #Banner .content_text span {
+		font-size: 28px;
+	}
+
+	#Banner .content_text li {
+			font-size: 18px;
+		}
+
+	#Banner span.contentDown {
+		font-size: 20px;
+	}	
+
+	#Banner .content_image {
+			background: url("../img/banner_icons.png") center top no-repeat;
+			background-size: 75% 75%;
+		}
+
+	}
+
+	@media screen and (max-width: 854px) {
+		#Banner .content_image {
+			display: none;
+		}
+	}
 
 					/* Block1 */
 
@@ -129,28 +169,61 @@ header {
 
 #Block2 {
 	padding-top: 60px;
-}
+}	
 
 	#Block2 .container {
-		padding-left: 30px;
+		position: relative;
 	}
+
+	#Block2 .line {
+		position: absolute;
+		top: 20px;
+		left: 5px;
+		height: 2730px;
+		width: 2px;
+		background: #bdbdbd;
+		z-index: 5;
+	}
+
+@media screen and (max-width: 1150px) {
+	#Block2 .line {height: 2680px;}
+}
+
+@media screen and (max-width: 1147px) {
+	#Block2 .line {height: 2835px;}
+}	
+
+		#Block2 h2 {
+			background: url("../img/Elipse.png") 0px center no-repeat;
+		}
+
+
 
 #Block2 h2, #Block2 p {
 	margin-bottom: 40px;
+	padding-left: 30px;
 }
+
 
 #Block2 .content_text {
 	width: 620px;
 }
 
-				/* Закладки */
+@media screen and (max-width: 1150px) {
+	#Block2 p {font-size: 16px;}
+	#Block2 .content_text {width: 40%;}
+}
+
+@media screen and (max-width: 846px) {
+	#Block2 .content_text {width: 100%;}
+	#Block2 {margin: 0 auto;}
+}
+
 .notebook > input {
     display: none;
 }
 
-	
-
-	.notebook label {
+	#Block2 .notebook label {
 		display: inline-block;
 		width: 20%;
 		height: 70px;
@@ -163,6 +236,15 @@ header {
 		margin-bottom: 37px;
 	}
 
+@media screen and (max-width: 1050px) {
+	#Block2 .notebook label {
+		width: 30%;
+	}
+	#Block2 .notebook label:nth-child(2) {
+		margin-left: 5%;
+	}
+}	
+
 		#Block2 .notebook label:nth-child(2) {
 			border-radius: 5px 0 0 5px;
 			margin-left: 30%;
@@ -173,12 +255,13 @@ header {
 			border-radius: 0 5px 5px 0;
 		}
 
-		.notebook > input:checked + label {
+		#Block2 .notebook > input:checked + label {
 			background-color: #1962b2;
 			color: #fff;
 		}
 
 		#tabFull, #tabEasy {
+			position: relative;
 			background-color: #eeeeee;
 			padding-top: 50px;
 			display: none;
@@ -189,15 +272,58 @@ header {
     display: block;
 }
 
-	#tabEasy .figure {
-		
+@media screen and (max-width: 700px) {
+	#Block2 {padding-bottom: 0;}
+	#Block2 .figure, #Block2 .line {display: none;}
+	#Block2 .notebook label {
+		display: inline-block;
+		width: 50%;
+		height: 70px;
+		line-height: 65px;
+		text-align: center;
+		font-size: 16px;
+		color: #7b7b7b;
+		cursor: pointer;
+		border: none;
+		margin-bottom: 0;
+		background-color: #f6f6f6;
+	}
+	
+	#Block2 .notebook label:nth-child(2) {
+			border-radius: 0 5px 0 0;
+			margin-left: 0;
+			margin-right: -5px;
+		}
+
+		#Block2 .notebook label:nth-child(4) {
+			border-radius: 5px 0 0 0;
+		}
+
+		#Block2 .notebook > input:checked + label {
+			background-color: #eeeeee;
+			color: #000;
+		}
+}
+
+	#tabEasy .figure, #tabFull .figure {
+		position: absolute;
+		top: -20px;
+		left: 38%;
 		background-image: url("../img/figure.png");
 		height: 22px;
 		width: 56px;
 	}
 
+		#tabFull .figure {
+			left: 55%;
+		}
+
 #Block2 .content {
 	margin-bottom: 40px;
+}
+
+#Block2 .content_image {
+	padding-left: 30px;
 }
 
 #Block2 .linkMode {
@@ -205,16 +331,224 @@ header {
 	padding-bottom: 50px;
 }
 
-#Block2 .linkMode a {
+#Block2 .linkMode label {
 	background: url("../img/arrow.png") left center  no-repeat;
 	text-decoration: none;
 	color: #579bb5;
-	padding: 40px;
+	padding-left: 30px;
 	font-size: 20px;
+	border: none;
+	width: 280px;
+	}
+
+	#tabFull .linkMode label { 
+		background: url("../img/arrow.png") 40px center  no-repeat;
 	}
 	
-	#Block2 .linkMode a:hover {
+	#Block2 .linkMode label:hover {
 		text-decoration: underline;
 	}
 
+				/* Block3 */
+
+#Block3 {
+	padding: 50px 0 60px;
+}
+
+	#Block3 h2 {
+		padding-left: 30px;
+		margin-bottom: 40px;
+		background: url("../img/Elipse.png") 0px center no-repeat;	
+	}
+
+	#Block3 p {
+		padding-left: 30px;
+	}
+
+	#Block3 .content_text {
+	width: 620px;
+	}
+
+	#Block3 .content_image {
+	padding-left: 30px;
+	}
+
 		
+			/* ProductBlock */
+
+#ProductBlock {
+	background: #e1fffa;
+	padding: 80px 0 60px;
+}	
+
+	#ProductBlock .container {
+		position: relative;
+	}
+
+	#ProductBlock .elipse {
+		background: url("../img/Elipse.png")no-repeat;
+		position: relative;
+		width: 12px;
+		height: 12px;
+		top: -20px;
+
+	}
+
+	#ProductBlock .content {
+		justify-content: start;
+	}
+
+	#ProductBlock .content_image {
+		width: 350px;
+		margin-left: 130px;
+		padding-top: 40px;
+	}
+
+	#ProductBlock h1 {
+		margin-bottom: 30px;
+	}		
+
+	#ProductBlock p {
+		margin-bottom: 30px;
+	}
+
+	#ProductBlock ul {
+		margin-bottom: 50px;
+	}
+
+	#ProductBlock li {
+		list-style-type: none;
+		padding-left: 40px;
+		font-size: 20px;
+		line-height: 48px;
+	}
+
+		#ProductBlock li:nth-child(1) {
+			background: url("../img/PBIcon1.png") left center no-repeat;
+			
+		}	
+		#ProductBlock li:nth-child(2) {
+			background: url("../img/PBIcon2.png") left center no-repeat;
+			
+		}
+		#ProductBlock li:nth-child(3) {
+			background: url("../img/PBIcon3.png") 5px center no-repeat;
+			
+		}
+		#ProductBlock li:nth-child(4) {
+			background: url("../img/PBIcon4.png") left center no-repeat;
+			
+		}	
+
+	#ProductBlock .buttom {
+		margin-bottom: 40px;
+	}	
+
+	#ProductBlock .PBLink1, #ProductBlock .PBLink2 {
+		margin-left: 20px;
+		padding-right: 10px;
+		font-size: 14px;
+		text-decoration: none;
+		border-bottom: 1px solid #1962b2;
+	} 
+
+		#ProductBlock .PBLink1 {
+			margin-right: 45px;
+			color: #1962b2;
+			background: url("../img/shevron_right.png") 220px center no-repeat;
+		}
+
+		#ProductBlock .PBLink2 {
+			color: #3581d5;
+			background: url("../img/shevron_right.png") 190px center no-repeat;
+		}
+		
+
+
+						/* GudeBlock */
+
+#GudeBlock {
+	padding: 80px 0 60px;
+	background: #eeeeee;
+}	
+
+	#GudeBlock h1 {
+		text-align: center;
+		margin-bottom: 30px;
+	}	
+
+	#GudeBlock .GBLink {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+		
+		#GudeBlock button {
+			color: #000;
+			font-size: 20px;
+			width: 48%;
+			min-width: 280px;
+			border: 2px dashed #bdbdbd;
+			padding-left: 20px;
+			text-align: left;
+			height: 70px;
+			margin-bottom: 30px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+			#GudeBlock button:hover {
+				background: #b4d1f2;
+				border: 2px solid #b4d1f2;
+			}
+
+			#GudeBlock button:focus {
+				background: #b4d1f2;
+				border: 2px solid #b4d1f2;
+			}
+
+
+						/* support */
+
+#support {
+	padding: 80px 0 90px;
+}						
+
+	#support h1 {
+		margin-bottom: 35px;
+		text-align: center;
+	}
+
+	#support .supportChoise {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	#support .visit, #support .watch{
+		width: 48%;
+		min-width: 290px;
+		height: 175px;
+		text-decoration: none;
+		font-size: 24px;
+		color: #3581d5;
+		border: 1px solid #e3f0ff;
+		border-radius: 5px;
+		padding-left: 180px;
+		padding-top: 40px;
+	}
+
+		#support .visit {
+			background: #e3f0ff url("../img/Supportvisit.png") 20px 20px no-repeat;
+		}
+
+		#support .watch {
+			background: #e3f0ff url("../img/supportwatch.png") 20px 20px no-repeat;
+		}
+
+footer {
+	background: #282828;
+	width: 100%;
+	height: 190px;
+}		
