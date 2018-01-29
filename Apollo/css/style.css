@@ -119,10 +119,9 @@ p {
 
 #about {
 	background: #efefef url("../img/letterP.png") 94px center no-repeat;
-	padding-top: 12%;
-	height: 750px;
+	padding-top: 10%;
 	padding-left: 46%;
-	padding-bottom: 14%;
+	padding-bottom: 10%;
 	position: relative;
 	margin-bottom: 50px;
 }	
@@ -145,7 +144,6 @@ p {
 	}	
 
 	#about .aboutImg {
-		/* background: url("../img/Foto.png") no-repeat;*/
 		width: 46%;
 		position: absolute;
 		left: 2%;
@@ -160,12 +158,7 @@ p {
 		}
 
 
-	#about .Icons {
-		position: absolute;
-		left: 46%;
-		bottom: 10%;
-	}
-
+	
 		#about .Icons a {
 			color: #909090;
 			margin-right: 20px;
@@ -190,10 +183,6 @@ p {
 
 	#about {
 		padding-left: 2%;
-	}
-	#about .Icons {
-		left: 2%;
-		bottom: 2%;
 	}
 }
 
