@@ -710,7 +710,7 @@ footer {
 
 	footer input {
 		background-color: inherit;
-		width: 80%;
+		/* max-width: 80%; */
 		height: 50px;
 		color: #67707c;
 		font: bold 15px 'Open Sans', arial;
